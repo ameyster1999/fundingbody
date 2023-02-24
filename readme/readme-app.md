@@ -1,6 +1,6 @@
 # funding application
 - rest api for creating funding 
-- Endpoint : "/funders/add"
+- Endpoint : "/funders/"
 
 ## docker
 Running our project in docker container:
