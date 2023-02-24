@@ -1,2 +1,2 @@
 # fundingbody
-refer read me directory
+refer readme directory
