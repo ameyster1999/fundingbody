@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.Values.app}}
+  namespace: {{.Values.namespace}}
+spec:
+  replicas: {{.Values.replicaCount}}
+  selector:
+    matchLabels:
+      app: {{.Values.app}}
+  template:
+    metadata:
+      labels:
+        app: {{.Values.app}}
+        repository: {{.Values.image.repository}}
+    spec:
+      containers:
+        - name:  {{.Values.app}}
+          image: {{.Values.image.name}}
+          imagePullPolicy: {{.Values.image.pullPolicy}}
+          ports:
+            - containerPort: {{.Values.port}}
+
+          env:
+            - name: DB_ENDPOINT
+              value:{{.Values.db.endpoint}}
+            - name: DB_USERNAME
+              value:{{.Values.db.user}}
+            - name: DB_PASSWORD
+              value: {{.Values.db.user}}
+    }
