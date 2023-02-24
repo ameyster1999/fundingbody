@@ -41,7 +41,7 @@ class FundingBodyControllerTest {
 
         // Act and Assert
         mockMvc.perform(
-                        post("/funders/add")
+                        post("/funders/")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(writeValueAsString(fundingBody)))
                 .andExpect(status().isOk())

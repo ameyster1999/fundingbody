@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class FundingBodyController {
     @Autowired private FundingBodyService fundingBodyService;
 
-    @PostMapping(value = "/add")
+    @PostMapping(value = "/")
     @ResponseStatus(HttpStatus.CREATED)
     @SneakyThrows
     public ResponseEntity<Long> createFunder(@Valid @RequestBody FundingBody fundingBody) {
