@@ -26,7 +26,7 @@ class FundingBodyControllerTest {
     @Autowired private ObjectMapper objectMapper;
 
     @Test
-    void createFunder_validInput_shouldReturn201() throws Exception {
+    void createFunder_validInput_Success() throws Exception {
         // Arrange
         FundingBody fundingBody =
                 FundingBody.builder()
